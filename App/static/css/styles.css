@@ -1,0 +1,348 @@
+input:focus, select:focus,
+textarea:focus, button:focus,
+.form-inline:focus, .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-- Define Color Scheme --*/
+:root {
+    --gray1: #0B0E11;
+    --gray2: #181A20;
+    --gray3: #191919;
+    --black: #000000;
+    --white: #ffffff;
+    --light-gray: #adadad;
+    --text-white: #EAECEF;
+    --red: #FF0000;
+    --soft-red: #BB0000;
+    --green: #00FF00;
+    --message-bg: #f1f1f1!important;
+    --message-text: #333;
+}
+/*-- End of Define Color Scheme --*/
+
+
+/*-- Body --*/
+body {
+    background-color: var(--gray1);
+    margin-bottom: 40px;
+}
+/*-- End of Body --*/
+
+
+/*-- API --*/
+#api {
+    text-align: center;
+    color: var(--red);
+    margin: 5px auto 5px auto;
+}
+/*-- End of API --*/
+
+
+/*-- Message --*/
+.message {
+    text-align: center;
+    color: var(--message-text);
+    background-color: var(--message-bg);
+    border-radius: 20px;
+    width: 50%;
+    margin: 30px auto 0 auto;
+    padding: 10px 0 10px 0;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 48px;
+}
+/*-- End of Message --*/
+
+
+/*-- Page Header --*/
+.page-header {
+    margin: 40px 0 0 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--text-white);
+}
+.page-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+}
+/*-- End of Page Header --*/
+
+
+/*-- Form --*/
+.form-group {
+    margin: 30px auto 0 auto;
+}
+.form-control{
+    border: 2px solid var(--message-bg);
+    background-color: var(--gray1);
+    color: var(--text-white);
+}
+input:-webkit-autofill { 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--text-white);
+}
+.form-control:focus {
+    border: 2px solid var(--soft-red);
+    background-color: var(--gray1);
+    color: var(--text-white);
+}
+.btn {
+    width: 100%;
+    border: none;
+    background-color: var(--message-text);
+    color: var(--text-white);
+}
+.btn:hover {
+    color: var(--red);
+    background-color: var(--message-text);
+}
+.register {
+    width: 25%;
+    margin: 30px auto 0 auto;
+    color: var(--text-white);
+}
+.register a:link, .register a:visited {
+    background-color: var(--message-text);
+    color: var(--text-white);
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.register a:hover, .register a:active {
+    color: var(--red);
+    background-color: var(--message-text);
+}
+/*-- End of Form --*/
+
+
+/*-- Content --*/
+.content {
+    color: var(--text-white);
+    background-color: var(--gray2);
+    margin: 30px 0 0 0;
+    padding: 30px 0 40px 0;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+.content_b {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--gray2);
+    color: var(--text-white);
+    width: 70%;
+    padding: 50px 0 50px 0;
+    margin: 30px auto 50px auto ;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 5px;
+}
+.content_c {
+    background-color: var(--gray2);
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--text-white);
+    width: 40%;
+    padding: 50px 0 50px 0;
+    margin: 30px auto 50px auto ;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.content_d {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--gray2);
+    color: var(--text-white);
+    width: 60%;
+    padding: 20px 0 50px 0;
+    margin: 30px auto 50px auto ;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+/*-- End of Content --*/
+
+
+.right-70 {
+    width: 100%;
+    margin: auto 0 auto 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+.left-30 {
+    width: 25%;
+    margin: auto 0 auto 7%;
+    text-align: center;
+    word-wrap: break-word;
+}
+.trade-button {
+    background-color: var(--gray1);
+    color: var(--red);
+    border-radius: 10px;
+    border: 2px solid var(--red);
+    padding: 10px 10px 10px 10px;
+    font-size: large;
+    font-weight: 600;
+}
+.trade-button:hover {
+    background-color: var(--message-bg);
+}
+
+/*-- Homepage --*/
+.h_right {
+    width: 35%;
+    margin: auto 10% auto 5%;
+    text-align: center;
+    word-wrap: break-word;
+}
+.h_left {
+    width: 35%;
+    margin: auto 5% auto 10%;
+    text-align: center;
+    word-wrap: break-word;
+}
+/*-- End of Homepage --*/
+
+
+/*-- Trading View Widget --*/
+#tradingview_e0046 {
+    width: 80%;
+    height: 600px;
+    margin: 50px auto 20px auto;
+}
+/*-- End of Trading View Widget --*/
+
+
+/*-- Stats --*/
+.stats_area {
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+}
+.stats_title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+}
+.stats_row {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+}
+.stats_left {
+    width: 50%;
+    margin: 40px 5% 0 5%;
+    text-align: center;
+}
+.stats_left tr {
+    height: 70px
+}
+.stats_left h6 {
+    margin: 0 0 0 0;
+}
+.stats_left h5 {
+    margin: 5px 0 0 0;
+}
+.stats_right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 40px 5% 0 5%;
+    text-align: center;
+}
+.stats_desc {
+    max-height: 350px;
+    padding-right: 10px;
+    word-wrap: normal;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black); 
+    border-radius: 10px;
+}
+/*-- End of Stats --*/
+
+
+/*-- Markets --*/
+#list_area {
+    width: 70%;
+    margin: 0 auto 0 auto;
+    color: var(--text-white);
+}
+#list_area .table_header {
+    font-weight: 400;
+    font-size: 20px;
+    height: 30px;
+}
+#list_area .list_coin {
+    font-weight: 300;
+    font-size: 20px;
+    height: 55px;
+}
+.list_coin a, .list_coin a:hover {
+    padding-left: 10px;
+    color: var(--text-white);
+    text-decoration: none;
+}
+.list_coin img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+}
+.table_header th, .list_coin td {
+    padding: 5px 10px 5px 10px;
+}
+/*-- End of Markets --*/
+
+
+/*-- Navbar --*/
+.navbar {
+    background-color: var(--gray2);
+    min-height: 75px;
+}
+.container-fluid {
+    padding: 10px 20px 10px 20px;
+}
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-white);
+}
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--red);
+}
+.nav-link {
+    font-size: 17px;
+    color: var(--text-white);
+}
+/*-- End of Navbar --*/

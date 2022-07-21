@@ -1,0 +1,25 @@
+{% extends "exchange/base.html" %}
+
+{% block title %}
+    Deposit - Bullion
+{% endblock %}
+
+{% block body %}
+    <div class="page-header">Deposit EUR</div>
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="content_c">
+        <form style="margin: auto;" action="{% url 'deposit' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input autofocus class="form-control" type="number" name="amount" placeholder="Amount" step=".01">
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Deposit">
+            </div>
+        </form>
+    </div>
+{% endblock %}

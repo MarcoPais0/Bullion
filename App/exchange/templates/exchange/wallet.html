@@ -1,0 +1,94 @@
+{% extends "exchange/base.html" %}
+{% load static %}
+
+{% block title %}
+    Wallet - Bullion
+{% endblock %}
+
+{% block body %}
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="page-header">Balances</div>
+
+    <div class="content_d">
+        {% if balances %}
+        <table>
+            <tr class="table_header">
+                <th><h4>Coin</h4></th>
+                <th><h4>Amount</h4></th>
+                <th><h4>Average Price</h4></th>
+            </tr>
+            {% for balance in balances %}
+                <tr class="list_coin">
+                    <td style="display: flex; flex-direction: row;"><img style="margin-right: 10px;" src="{{ balance.image }}" alt=""><h5>{{ balance.name }}</h5></td>
+                    <td><h5>{{ balance.amount }}</h5></td>
+                    <td><h5>{{ balance.average_price }}</h5></td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <table>
+            <tr class="table_header">
+                <th><h4>You Have No Balances Yet</h4></th>
+            </tr>
+        </table>
+        {% endif %}
+    </div>
+
+    <div class="page-header">Trades</div>
+
+    <div class="content_d" style="flex-direction: column; padding: 40px 40px 40px 40px;">
+        {% if page_obj %}
+        <table>
+            <tr class="table_header">
+                <th><h4>Coin</h4></th>
+                <th><h4>Amount</h4></th>
+                <th><h4>Price</h4></th>
+                <th><h4>Operation</h4></th>
+                <th><h4>Date</h4></th>
+            </tr>
+            {% for trade in page_obj %}
+                <tr class="list_coin">
+                    <td style="display: flex; flex-direction: row;"><img style="margin-right: 10px;" src="{{ trade.image }}" alt=""><h5>{{ trade.name }}</h5></td>
+                    <td><h5>{{ trade.amount }}</h5></td>
+                    <td><h5>{{ trade.price }}</h5></td>
+                    <td><h5>{{ trade.operation }}</h5></td>
+                    <td><h5>{{ trade.date }}</h5></td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <ul class="pagination pagination-lg justify-content-center" style="padding: 20px 0 0 0;">
+            {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+            {% endif %}
+
+            {% for page in range %}
+                {% if page == page_obj.number %}
+                    <li class="page-item active" aria-current="page"><span class="page-link">{{ page }}</span></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+            {% endif %}
+        </ul>
+        
+        {% else %}
+        <table style="text-align: center;">
+            <tr class="table_header">
+                <th><h4>You Have No Trades Yet</h4></th>
+            </tr>
+        </table>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

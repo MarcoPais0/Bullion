@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Bullion{% endblock %}</title>
+        <link rel="icon" href="{% static 'logos/logo_1.png' %}">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <meta charset="UTF-8">
+        
+        <script src="{% static 'js/checkAPI.js' %}"></script>
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'markets' %}">Markets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'trending' %}">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'search' %}">Search</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'deposit' %}">Deposit</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <div class="mx-auto order-0">
+                    <a class="navbar-brand mx-auto" href="{% url 'homepage' %}"><img src="{% static 'logos/logo_6.png' %}" alt="Bullion" width="200px" height="50px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ms-auto">
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'wallet' %}">Wallet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Register</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div id="api"></div>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,51 @@
+{% extends "exchange/base.html" %}
+{% load static %}
+
+{% block title %}
+    Homepage - Bullion
+{% endblock %}
+
+{% block body %}
+    <div class="page-header"></div>
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="content_b">
+        <img class="h_left" src="{% static 'img/2.jpg' %}" alt="" height="250px">
+        <div class="h_right">
+            <h2 style="padding-bottom: 20px;">Welcome!</h2>
+            <h4 style="padding-bottom: 10px;">Join the millions of investors all around the world.</h4>
+            <a href="{% url 'register' %}"><h7>Register Here</h7></a>
+        </div>
+    </div>
+    <div class="content_b">
+        <div class="h_left">
+            <h2 style="padding-bottom: 20px;">Markets and Coins!</h2>
+            <h4 style="padding-bottom: 10px;">See how the markets are doing today and learn more about the top cryptocurrencies.</h4>
+            <a href="{% url 'markets' %}"><h7>Markets Here</h7></a>
+        </div>
+        <img class="h_right" src="{% static 'img/5.jpg' %}" alt="" height="250px">
+    </div>
+    <div class="content_b">
+        <img class="h_left" src="{% static 'img/1.jpg' %}" alt="" height="250px">
+        <div class="h_right">
+            <h2 style="padding-bottom: 20px;">Deposit Fiat!</h2>
+            <h4 style="padding-bottom: 10px;">Before exchanging cryptocurrencies you need to deposit Fiat money like USD or EUR.</h4>
+            <a href="#"><h7>Deposit Here</h7></a>
+        </div>
+    </div>
+    <div class="content_b">
+        <div class="h_left">
+            <h2 style="padding-bottom: 20px;">Exchange!</h2>
+            <h4 style="padding-bottom: 10px;">Bullion allows you to buy and sell cryptocurrencies with ease.</h4>
+            <a href="#"><h7>Exchange Here</h7></a>
+        </div>
+        <img class="h_right" src="{% static 'img/3.jpg' %}" alt="" height="250px">
+    </div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

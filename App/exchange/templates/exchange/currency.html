@@ -1,0 +1,39 @@
+{% extends "exchange/base.html" %}
+{% load static %}
+
+{% block title %}
+    Bullion
+{% endblock %}
+
+{% block body %}
+    <div class="page-header"></div>
+    {% if user.is_authenticated %}
+    <div id="fav" class="page-header" style="margin-top: 20px;" value="{{ currency }}"></div>
+    <div class="page-header" style="margin-top: 20px;"><a href="{% url 'trade' currency %}"><button class="trade-button">Trade Now</button></a></div>
+    {% endif %}
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="content">
+        <div class="stats_area"></div>
+        
+        <div class="tradingview-widget-container">
+            <div id="tradingview_e0046"></div>
+            <div class="tradingview-widget-copyright">
+                <a id="link" href="https://www.tradingview.com/symbols/BTCEUR/?exchange=COINBASE" rel="noopener" target="_blank">
+                    <span id="description" class="blue-text">BTCEUR Chart</span>
+                </a> by TradingView
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/currency.js' %}"></script>
+    <script src="{% static 'js/tradingview.js' %}"></script>
+    <script src="{% static 'js/favorite.js' %}"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+{% endblock %}

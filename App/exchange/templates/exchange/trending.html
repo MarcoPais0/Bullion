@@ -1,0 +1,24 @@
+{% extends "exchange/base.html" %}
+{% load static %}
+
+{% block title %}
+    Trending - Bullion
+{% endblock %}
+
+{% block body %}
+    <div class="page-header">Trending Coins</div>
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="content_c">
+        <table id="list_area">
+        </table>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/trending.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "exchange/base.html" %}
+{% load static %}
+
+{% block title %}
+    Markets - Bullion
+{% endblock %}
+
+{% block body %}
+    <div class="page-header">See Today's Markets</div>
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="content">
+        <table id="list_area">
+        </table>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/markets.js' %}"></script>
+{% endblock %}

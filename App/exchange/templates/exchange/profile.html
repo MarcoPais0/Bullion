@@ -1,0 +1,68 @@
+{% extends "exchange/base.html" %}
+{% load static %}
+
+{% block title %}
+    Profile - Bullion
+{% endblock %}
+
+{% block body %}
+    <div class="page-header">{{ user.username }}</div>
+
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="content_d">
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <h4>Change Username</h4>
+            </div>
+            <div class="form-group">
+                <input type="text" name="new_username" class="form-control" placeholder="New Username" value="{{ user.username }}" required>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Change Username">
+            </div>
+        </form>
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <h4>Change Password</h4>
+            </div>
+            <div class="form-group">
+                <input type="password" name="old_password" class="form-control" placeholder="Old Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="new_password" class="form-control" placeholder="New Password" required>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Change Password">
+            </div>
+        </form>
+    </div>
+
+    <div class="page-header">Favorites</div>
+
+    <div class="content_c">
+        {% if favorites %}
+        <table>
+            {% for favorite in favorites %}
+                <tr class="list_coin">
+                    <td style="display: flex; flex-direction: row;"><img src="{{ favorite.image }}" alt=""><a href="currencies/{{favorite.coin_id}}"><h3>{{ favorite.name }}</h3></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <table>
+            <tr class="table_header">
+                <th>You Have No Favorites Yet</th>
+            </tr>
+        </table>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
