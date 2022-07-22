@@ -10,15 +10,14 @@ Bullion is a WebApp that simulates a cryptocurrency exchange.
 
 ## Installation
 
-To install this project you must fork this repository.
+To install this project you must **fork** this repository.
 
 ## Usage
 
-Make sure you have Python and Django installed.
+Make sure you have **Python** and **Django** installed.
 
-Before running the project migrations must be made and applied to the project.
-
-For this open the command terminal in the "manage.py" directory.
+**Before** running the project **migrations must be made and applied** to the project.
+For this open the command terminal in the **"manage.py"** directory.
 
 Run the following commands in the terminal.
 ```bash
