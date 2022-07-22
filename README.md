@@ -1,8 +1,8 @@
 # Bullion
 
-Bullion is a WebApp that simulates a cryptocurrency exchange, made as the **Final Project** for the **CS50’s Web Programming with Python and JavaScript** course.
+Bullion is a WebApp that simulates a cryptocurrency exchange, made as the **Final Project** for the [**CS50’s Web Programming with Python and JavaScript**](https://cs50.harvard.edu/web/2020/) course.
 
-# Distinctiveness and Complexity
+## Distinctiveness and Complexity
 
 I believe this project is sufficiently distinct from all the projects made for this course because it is not too similar to any of these, eventhough it might have some features that are very similar to the other apps, for example, the login and register features.
 
