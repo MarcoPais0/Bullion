@@ -66,6 +66,8 @@ I also separated the Django Project in two separate apps, the "users" and the "e
   - **users**: this file contains all the functions responsible for handling the mapping and the business logic behind the login, logout and register paths.
   
 - **tests.py files**
+  - **users**: this file tests the User model with tests such as changing the password, verifying the username is correct and changing the username.
+  - **exchange**: this file tests the different fuctionalities of the app.
 
 # Installation
 
@@ -84,8 +86,13 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 Now we can run the project using the following command.
-```
+```bash
 python manage.py runserver
 ```
 
 # Testing
+
+To run the application tests you have to run this command in the "manage.py" file directory.
+```bash
+python manage.py test
+```
