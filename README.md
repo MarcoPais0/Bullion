@@ -4,9 +4,13 @@ Bullion is a WebApp that simulates a cryptocurrency exchange, made as the **Fina
 
 ## Distinctiveness and Complexity
 
-I believe this project is sufficiently distinct from all the projects made for this course because it is not too similar to any of these, eventhough it might have some features that are very similar to the other apps, for example, the login and register features.
+I believe this project is sufficiently distinct from all the projects made for this course because it is not too similar to any of these, eventhough it might have some features that are very similar to some features present in the other apps, for example, the login and register features.
 
-The complexity is greater than all the other projects too because it involves the consuming of an API and the project has a big list of features.
+The **complexity** is greater than all the other projects too because it involves the consuming of an API and the project has a big list of features.
+
+This project also makes use of **4 Django Models** and a series of **JavaScript** files.
+
+During all the **testing** done the **WebApp was mobile-responsive** allowing me to use all the features available in the app.
 
 ## Table of Contents
 
