@@ -30,36 +30,42 @@ In this section I will not explain the various settings files and the irrelevant
 
 I also separated the Django Project in two separate apps, the "users" and the "exchange" apps.
 
-- **".js files"**
-  - **"checkAPI.js"**: this script makes a request to the API to see if it is working. If it is not it displays a messsage in the app.
-  - **"currency.js"**: this script loads all the data needed in the specific coin page and refreshes it using a cycle.
-  - **"favorite.js"**: this script makes an API call to the application to add or remove a coin to an User's favorites list.
-  - **"markets.js"**: this script loads the table for the markets page that displays the top 100 cryptocurrencies.
-  - **"search.js"**: this script loads the search results on the search page everytime the input changes.
-  - **"trade.js"**: this script is responsible for updating the current price and transaction value prediction in the trade page.
-  - **"tradingview.js"**: this script is responsible for loading the trading view widget in the trade and currency pages.
-  - **"trending.js"**: this script is responsible for loading all the trending coins in the trending page.
+- **.js files**
+  - **checkAPI.js**: this script makes a request to the API to see if it is working. If it is not it displays a messsage in the app.
+  - **currency.js**: this script loads all the data needed in the specific coin page and refreshes it using a cycle.
+  - **favorite.js**: this script makes an API call to the application to add or remove a coin to an User's favorites list.
+  - **markets.js**: this script loads the table for the markets page that displays the top 100 cryptocurrencies.
+  - **search.js**: this script loads the search results on the search page everytime the input changes.
+  - **trade.js**: this script is responsible for updating the current price and transaction value prediction in the trade page.
+  - **tradingview.js**: this script is responsible for loading the trading view widget in the trade and currency pages.
+  - **trending.js**: this script is responsible for loading all the trending coins in the trending page.
   
-- **".html files"**
-  - **"users/base.html"**: base template for all the other templates in the users app.
-  - **"users/login.html"**: template responsible for the login page.
-  - **"users/register.html"**: template responsible for the register page.
-  - **"exchange/base.html"**: base template for all the other templates in the exchange app.
-  - **"exchange/currency.html"**: template responsible for the individual coin page.
-  - **"exchange/deposit.html"**: template responsible for the deposit page.
-  - **"exchange/homepage.html"**: template responsible for the homepage.
-  - **"exchange/markets.html"**: template responsible for the markets page, where top 100 cryptocurrencies are shown.
-  - **"exchange/profile.html"**: template responsible for the profile page, where user's username and password can be altered and user's favorites are listed.
-  - **"exchange/search.html"**: template responsible for the search page.
-  - **"exchange/trade.html"**: template responsible for the trade page.
-  - **"exchange/trending.html"**: template responsible for the trending page.
-  - **"exchange/wallet.html"**: template responsible for the wallet page, where user's trades and balances are shown.
+- **.html files**
+  - **users/base.html**: base template for all the other templates in the users app.
+  - **users/login.html**: template responsible for the login page.
+  - **users/register.html**: template responsible for the register page.
+  - **exchange/base.html**: base template for all the other templates in the exchange app.
+  - **exchange/currency.html**: template responsible for the individual coin page.
+  - **exchange/deposit.html**: template responsible for the deposit page.
+  - **exchange/homepage.html**: template responsible for the homepage.
+  - **exchange/markets.html**: template responsible for the markets page, where top 100 cryptocurrencies are shown.
+  - **exchange/profile.html**: template responsible for the profile page, where user's username and password can be altered and user's favorites are listed.
+  - **exchange/search.html**: template responsible for the search page.
+  - **exchange/trade.html**: template responsible for the trade page.
+  - **exchange/trending.html**: template responsible for the trending page.
+  - **exchange/wallet.html**: template responsible for the wallet page, where user's trades and balances are shown.
   
-- **"models.py files"**
-  - **"User"**: model responsible for the management of all users.
-  - **"Trade"**: model responsible for the storage of all trades. Every trade is stored with all the information needed.
-  - **"Balance"**: model responsible for all the balances of all users.
-  - **"Favorite"**: model responsible for all the favorites of all users.
+- **models.py files**
+  - **User**: model responsible for the management of all users.
+  - **Trade**: model responsible for the storage of all trades. Every trade is stored with all the information needed.
+  - **Balance**: model responsible for all the balances of all users.
+  - **Favorite**: model responsible for all the favorites of all users.
+
+- **views.py files**
+  - **exchange**: this file contains all the functions that handle all the business logic and mappings behind all the paths inside the exchange app, including favorites, trades, individual coin page and all the others.
+  - **users**: this file contains all the functions responsible for handling the mapping and the business logic behind the login, logout and register paths.
+  
+- **tests.py files**
 
 # Installation
 
