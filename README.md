@@ -12,15 +12,17 @@ This project also makes use of **4 Django Models** and a series of **JavaScript*
 
 During all the **testing** done the **WebApp was mobile-responsive** allowing me to use all the features available in the app.
 
-## Table of Contents
+# Description
 
-## Description
+## Technologies Used
 
-## Installation
+## Files
+
+# Installation
 
 To install this project you must **fork** this repository.
 
-## Usage
+# Running
 
 Make sure you have **Python** and **Django** installed.
 
@@ -37,4 +39,4 @@ Now we can run the project using the following command.
 python manage.py runserver
 ```
 
-## Testing
+# Testing
