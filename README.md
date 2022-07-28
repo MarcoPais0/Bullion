@@ -49,7 +49,7 @@ I also separated the Django Project in two separate apps, the "users" and the "e
 - **users**
   - **urls.py**: this file contains all the paths possible for the users app. It also links each path to a specific view.
   - **views.py**: this file contains all the functions responsible for handling the mapping and the business logic behind the login, logout and register paths.
-  - **test.py**: this file tests the User model with tests such as changing the password, verifying the username is correct and changing the username.
+  - **tests.py**: this file tests the User model with tests such as changing the password, verifying the username is correct and changing the username.
   - **models.py**
     - **User**: model responsible for the management of all users.
   - **admin.py**: here we include the User Model in the Admin App so we can manage all the users more easily.
@@ -61,7 +61,7 @@ I also separated the Django Project in two separate apps, the "users" and the "e
 - **exchange**
   - **urls.py**: this file contains all the paths possible for the exchange app. It also links each path to a specific view.
   - **views.py**: this file contains all the functions that handle all the business logic and mappings behind all the paths inside the exchange app, including favorites, trades, individual coin page and all the others.
-  - **test.py**: this file tests the different fuctionalities of the app.
+  - **tests.py**: this file tests the different fuctionalities of the app.
   - **models.py**
     - **Trade**: model responsible for the storage of all trades. Every trade is stored with all the information needed.
     - **Balance**: model responsible for all the balances of all users.
