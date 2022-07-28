@@ -4,7 +4,7 @@ Bullion is a WebApp that simulates a cryptocurrency exchange, made as the **Fina
 
 ## Distinctiveness and Complexity
 
-I believe this project is sufficiently distinct from all the projects made for this course because it is not too similar to any of these, eventhough it might have some features that are very similar to some features present in the other apps, for example, the login and register features.
+I believe this project is sufficiently distinct from all the projects made for this course because it is not too similar to any of those, eventhough it might have some features that are very similar to some features present in the other apps, for example, the login and register features. It is also seperated in two main apps, wich makes it a little more complex too.
 
 The **complexity** is greater than all the other projects too because it involves the consuming of an API and the project has a big list of features.
 
@@ -26,11 +26,13 @@ To import the price charts I used [Trading View's Widget](https://www.tradingvie
 
 In this section I will not explain the various settings files and the irrelevant files like the ".css" or the ".png" files.
 
-**I will only explain ".html", ".js", "models.py", "tests.py" and "views.py" files.**
-
 I also separated the Django Project in two separate apps, the "users" and the "exchange" apps.
 
-- **.js files**
+- **static/css/styles.css**: this file contains all the styles for the various components of the WebApp pages.
+
+- **static/img, static/logos**: these folders contain all the images used in the WebApp.
+
+- **static/js**
   - **checkAPI.js**: this script makes a request to the API to see if it is working. If it is not it displays a messsage in the app.
   - **currency.js**: this script loads all the data needed in the specific coin page and refreshes it using a cycle.
   - **favorite.js**: this script makes an API call to the application to add or remove a coin to an User's favorites list.
@@ -40,34 +42,42 @@ I also separated the Django Project in two separate apps, the "users" and the "e
   - **tradingview.js**: this script is responsible for loading the trading view widget in the trade and currency pages.
   - **trending.js**: this script is responsible for loading all the trending coins in the trending page.
   
-- **.html files**
-  - **users/base.html**: base template for all the other templates in the users app.
-  - **users/login.html**: template responsible for the login page.
-  - **users/register.html**: template responsible for the register page.
-  - **exchange/base.html**: base template for all the other templates in the exchange app.
-  - **exchange/currency.html**: template responsible for the individual coin page.
-  - **exchange/deposit.html**: template responsible for the deposit page.
-  - **exchange/homepage.html**: template responsible for the homepage.
-  - **exchange/markets.html**: template responsible for the markets page, where top 100 cryptocurrencies are shown.
-  - **exchange/profile.html**: template responsible for the profile page, where user's username and password can be altered and user's favorites are listed.
-  - **exchange/search.html**: template responsible for the search page.
-  - **exchange/trade.html**: template responsible for the trade page.
-  - **exchange/trending.html**: template responsible for the trending page.
-  - **exchange/wallet.html**: template responsible for the wallet page, where user's trades and balances are shown.
-  
-- **models.py files**
-  - **User**: model responsible for the management of all users.
-  - **Trade**: model responsible for the storage of all trades. Every trade is stored with all the information needed.
-  - **Balance**: model responsible for all the balances of all users.
-  - **Favorite**: model responsible for all the favorites of all users.
+- **bullion**
+  - **urls.py**: this file adds all the urls present in the users and exchange apps to the main app, bullion.
+  - **settings.py**: this file contains all the settings and configurations of the bullion app. Here we include the two sub-apps on the main app.
 
-- **views.py files**
-  - **exchange**: this file contains all the functions that handle all the business logic and mappings behind all the paths inside the exchange app, including favorites, trades, individual coin page and all the others.
-  - **users**: this file contains all the functions responsible for handling the mapping and the business logic behind the login, logout and register paths.
+- **users**
+  - **urls.py**: this file contains all the paths possible for the users app. It also links each path to a specific view.
+  - **views.py**: this file contains all the functions responsible for handling the mapping and the business logic behind the login, logout and register paths.
+  - **test.py**: this file tests the User model with tests such as changing the password, verifying the username is correct and changing the username.
+  - **models.py**
+    - **User**: model responsible for the management of all users.
+  - **admin.py**: here we include the User Model in the Admin App so we can manage all the users more easily.
+  - **templates**
+    - **base.html**: base template for all the other templates in the users app.
+    - **login.html**: template responsible for the login page.
+    - **register.html**: template responsible for the register page.
   
-- **tests.py files**
-  - **users**: this file tests the User model with tests such as changing the password, verifying the username is correct and changing the username.
-  - **exchange**: this file tests the different fuctionalities of the app.
+- **exchange**
+  - **urls.py**: this file contains all the paths possible for the exchange app. It also links each path to a specific view.
+  - **views.py**: this file contains all the functions that handle all the business logic and mappings behind all the paths inside the exchange app, including favorites, trades, individual coin page and all the others.
+  - **test.py**: this file tests the different fuctionalities of the app.
+  - **models.py**
+    - **Trade**: model responsible for the storage of all trades. Every trade is stored with all the information needed.
+    - **Balance**: model responsible for all the balances of all users.
+    - **Favorite**: model responsible for all the favorites of all users.
+  - **admin.py**: here we include the Trade, Balance and Favorite Models in the Admin App so we can manage all of them more easily.
+  - **templates**
+    - **base.html**: base template for all the other templates in the exchange app.
+    - **currency.html**: template responsible for the individual coin page.
+    - **deposit.html**: template responsible for the deposit page.
+    - **homepage.html**: template responsible for the homepage.
+    - **markets.html**: template responsible for the markets page, where top 100 cryptocurrencies are shown.
+    - **profile.html**: template responsible for the profile page, where user's username and password can be altered and user's favorites are listed.
+    - **search.html**: template responsible for the search page.
+    - **trade.html**: template responsible for the trade page.
+    - **trending.html**: template responsible for the trending page.
+    - **wallet.html**: template responsible for the wallet page, where user's trades and balances are shown.
 
 # Installation
 
