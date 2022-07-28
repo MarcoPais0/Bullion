@@ -24,9 +24,7 @@ To import the price charts I used [Trading View's Widget](https://www.tradingvie
 
 ## Files
 
-In this section I will not explain the various settings files and the irrelevant files like the ".css" or the ".png" files.
-
-I also separated the Django Project in two separate apps, the "users" and the "exchange" apps.
+I separated the Django Project in two separate apps, the "users" and the "exchange" apps.
 
 - **static/css/styles.css**: this file contains all the styles for the various components of the WebApp pages.
 
